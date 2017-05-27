@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "366131102848",
+    "firebase_url": "https://sdacard-1b8bd.firebaseio.com",
+    "project_id": "sdacard-1b8bd",
+    "storage_bucket": "sdacard-1b8bd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:366131102848:android:3404a9427531d849",
+        "android_client_info": {
+          "package_name": "com.sda.balys.robert.gameofcards"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "366131102848-6emp8rv3qnagd60abgu4rn4m536jqfhf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDAWqc3lZGBiKFQCp-f-KUHJkauvPiOtwU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
