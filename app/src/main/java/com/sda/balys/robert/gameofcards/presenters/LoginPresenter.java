@@ -2,6 +2,7 @@ package com.sda.balys.robert.gameofcards.presenters;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.text.TextUtils;
 import android.widget.Toast;
@@ -10,6 +11,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.sda.balys.robert.gameofcards.MainActivity;
 import com.sda.balys.robert.gameofcards.Utils;
 
 /**
@@ -60,6 +62,8 @@ public class LoginPresenter {
                 if (task.isSuccessful()) {
                     progressDialog.dismiss();
                     Toast.makeText(activity, "Welcome", Toast.LENGTH_SHORT).show();
+                    activity.finish();
+                    activity.startActivity(new Intent(activity, MainActivity.class));
 
                 } else {
                     progressDialog.dismiss();
