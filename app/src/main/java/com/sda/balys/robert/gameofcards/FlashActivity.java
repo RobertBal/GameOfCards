@@ -17,7 +17,11 @@ public class FlashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_flash);
         runMainScreen();
-        
+        runTotal();
+    }
+
+    private void runTotal() {
+
     }
 
     private void runMainScreen() {
