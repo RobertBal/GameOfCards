@@ -12,6 +12,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.sda.balys.robert.gameofcards.MainActivity;
+import com.sda.balys.robert.gameofcards.R;
 import com.sda.balys.robert.gameofcards.RegisterActivity;
 import com.sda.balys.robert.gameofcards.Utils;
 
@@ -25,33 +26,32 @@ public class RegisterPresenter {
     private ProgressDialog progressDialog;
 
 
+    public RegisterPresenter() {
+    }
+
+    public void registerUser(final Activity activity, String email, String password) {
+        firebaseAuth = FirebaseAuth.getInstance();
 
 
-    public RegisterPresenter(){}
-
-    public void registerUser(final Activity activity, String email, String password){
-        firebaseAuth= FirebaseAuth.getInstance();
-
-
-        if(TextUtils.isEmpty(email)){
-            Utils.showToast(activity,"Enter the mail");
+        if (TextUtils.isEmpty(email)) {
+            Utils.showToast(activity, activity.getString(R.string.Enter_the_mail));
             return;
-        } else if(!Utils.isEmailVavlid(email)){
-            Utils.showToast(activity,"Enter the valid mail");
-            return;
-        }
-
-        if(TextUtils.isEmpty(password)){
-            Utils.showToast(activity,"Enter the  password ");
-            return;
-        }
-        if(!Utils.isPasswordValid(password)){
-            Utils.showToast(activity,"Enter the valid password");
+        } else if (!Utils.isEmailVavlid(email)) {
+            Utils.showToast(activity, activity.getString(R.string.Enter_the_valid_mail));
             return;
         }
 
-        if(!Utils.checkInternetConnection(activity)){
-            Utils.showToast(activity,"You have not internet connection");
+        if (TextUtils.isEmpty(password)) {
+            Utils.showToast(activity,  activity.getString(R.string.Enter_the_password));
+            return;
+        }
+        if (!Utils.isPasswordValid(password)) {
+            Utils.showToast(activity, activity.getString(R.string.Enter_the_valid_password));
+            return;
+        }
+
+        if (!Utils.checkInternetConnection(activity)) {
+            Utils.showToast(activity, activity.getString(R.string.You_have_not_internet_connetction));
             return;
         }
 
@@ -60,17 +60,17 @@ public class RegisterPresenter {
         progressDialog.show();
 
 
-        firebaseAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(activity, new OnCompleteListener<AuthResult>() {
+        firebaseAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(activity, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
-                if(task.isSuccessful()){
+                if (task.isSuccessful()) {
                     progressDialog.dismiss();
-                    Toast.makeText(activity,"Account created",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(activity, "Account created", Toast.LENGTH_SHORT).show();
                     activity.finish();
                     activity.startActivity(new Intent(activity, MainActivity.class));
-                }else{
+                } else {
                     progressDialog.dismiss();
-                    Toast.makeText(activity,"something went wrong",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(activity, "something went wrong", Toast.LENGTH_SHORT).show();
 
                 }
             }
@@ -80,44 +80,44 @@ public class RegisterPresenter {
 
     public void loginUser(final Activity activity, String email, String password) {
 
-        firebaseAuth= FirebaseAuth.getInstance();
+        firebaseAuth = FirebaseAuth.getInstance();
 
 
-        if(TextUtils.isEmpty(email)){
-            Utils.showToast(activity,"Enter the mail");
+        if (TextUtils.isEmpty(email)) {
+            Utils.showToast(activity, "Enter the mail");
             return;
-        } else if(!Utils.isEmailVavlid(email)){
-            Utils.showToast(activity,"Enter the valid mail");
-            return;
-        }
-
-        if(TextUtils.isEmpty(password)){
-            Utils.showToast(activity,"Enter the  password ");
-            return;
-        }
-        if(!Utils.isPasswordValid(password)){
-            Utils.showToast(activity,"Enter the valid password");
+        } else if (!Utils.isEmailVavlid(email)) {
+            Utils.showToast(activity, "Enter the valid mail");
             return;
         }
 
-        if(!Utils.checkInternetConnection(activity)){
-            Utils.showToast(activity,"You have not internet connection");
+        if (TextUtils.isEmpty(password)) {
+            Utils.showToast(activity, "Enter the  password ");
+            return;
+        }
+        if (!Utils.isPasswordValid(password)) {
+            Utils.showToast(activity, "Enter the valid password");
+            return;
+        }
+
+        if (!Utils.checkInternetConnection(activity)) {
+            Utils.showToast(activity, "You have not internet connection");
             return;
         }
 
         progressDialog = new ProgressDialog(activity);
         progressDialog.setMessage("Login...");
         progressDialog.show();
-        firebaseAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(activity, new OnCompleteListener<AuthResult>() {
+        firebaseAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(activity, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
-                if(task.isSuccessful()){
+                if (task.isSuccessful()) {
                     progressDialog.dismiss();
-                    Toast.makeText(activity,"Account created",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(activity, "Account created", Toast.LENGTH_SHORT).show();
 
-                }else{
+                } else {
                     progressDialog.dismiss();
-                    Toast.makeText(activity,"something went wrong",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(activity, "something went wrong", Toast.LENGTH_SHORT).show();
 
                 }
             }

@@ -25,7 +25,7 @@ import butterknife.OnClick;
  * Created by RENT on 2017-05-27.
  */
 
-public class RegisterActivity extends AppCompatActivity{
+public class RegisterActivity extends AppCompatActivity {
     @BindView(R.id.registerInfoText)
     TextView infoText;
     @BindView(R.id.editTextMail)
@@ -43,32 +43,27 @@ public class RegisterActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
         ButterKnife.bind(this);
-        if(registerPresenter==null){
-            registerPresenter=new RegisterPresenter();
+        if (registerPresenter == null) {
+            registerPresenter = new RegisterPresenter();
         }
     }
 
-
     @OnClick(R.id.buttonRegister)
-    public void createUser(){
-       String email = textEmail.getText().toString().trim().toLowerCase();
+    public void createUser() {
+        String email = textEmail.getText().toString().trim().toLowerCase();
         String password = textPassword.getText().toString().trim();
-        registerPresenter.registerUser(this,email,password);
+        registerPresenter.registerUser(this, email, password);
     }
-@OnClick(R.id.textViewSignin)
-    public void loginUser(){
-    Intent intent = new Intent(this,LoginActivity.class);
-    intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-    startActivity(intent);
-    finish();
+
+    @OnClick(R.id.textViewSignin)
+    public void loginUser() {
+        Intent intent = new Intent(this, LoginActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+        startActivity(intent);
+        finish();
 
 
-
-}
-
-
-
-
+    }
 
 
 }

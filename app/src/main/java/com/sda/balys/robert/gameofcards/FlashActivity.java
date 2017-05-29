@@ -12,6 +12,7 @@ import android.support.v7.app.AppCompatActivity;
 
 public class FlashActivity extends AppCompatActivity {
     private int splashRime = 3000;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,22 +20,18 @@ public class FlashActivity extends AppCompatActivity {
         runMainScreen();
         runTotal();
     }
-
     private void runTotal() {
-
     }
-
     private void runMainScreen() {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
                 navigateToMenuScreen();
             }
-        },3000);
+        }, 3000);
     }
-
     private void navigateToMenuScreen() {
-        Intent intent = new Intent(this,RegisterActivity.class);
+        Intent intent = new Intent(this, RegisterActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
         startActivity(intent);
         finish();

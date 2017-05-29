@@ -21,7 +21,7 @@
             android:id="@+id/editTextMail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_margin="@dimen/margin_between_item"
             android:gravity="center"
             android:hint="Enter your email"
             android:inputType="textEmailAddress"/>
@@ -31,7 +31,7 @@
             android:id="@+id/editTextPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_margin="@dimen/margin_between_item"
             android:gravity="center"
             android:hint="Enter your password"
             android:inputType="textPassword"
@@ -41,11 +41,11 @@
             android:id="@+id/buttonRegister"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_margin="@dimen/margin_between_item"
             android:text="RegisterUser"/>
         <TextView
-            android:text="Already registered? Please SignIn "
-            android:layout_margin="10dp"
+            android:text="@string/already_registered_please_signin"
+            android:layout_margin="@dimen/margin_between_item"
             android:id="@+id/textViewSignin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

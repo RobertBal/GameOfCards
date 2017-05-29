@@ -10,7 +10,7 @@ android:background="@drawable/gradient_background">
     android:layout_centerHorizontal="true"
     android:layout_centerVertical="true">
     <TextView
-        android:text="Login User"
+        android:text="@string/login_user"
         android:id="@+id/loginInfoText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -23,7 +23,7 @@ android:background="@drawable/gradient_background">
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:gravity="center"
-        android:hint="Enter your email"
+        android:hint="@string/enter_your_email"
         android:inputType="textEmailAddress"/>
 
     <EditText
@@ -33,7 +33,7 @@ android:background="@drawable/gradient_background">
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:gravity="center"
-        android:hint="Enter your password"
+        android:hint="@string/enter_your_password"
         android:inputType="textPassword"
         />
 
@@ -44,7 +44,7 @@ android:background="@drawable/gradient_background">
         android:layout_margin="10dp"
         android:text="Login User"/>
     <TextView
-        android:text="Create and register user "
+        android:text="@string/create_and_register_user"
         android:layout_margin="10dp"
         android:id="@+id/textViewSignin"
         android:layout_width="wrap_content"

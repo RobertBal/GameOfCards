@@ -35,9 +35,9 @@ public class LoginActivity extends AppCompatActivity {
 
 
     @OnClick(R.id.buttonLogin)
-    public void loginUser(){
+    public void loginUser() {
         String email = emailT.getText().toString().trim().toLowerCase();
         String password = passwordT.getText().toString().trim();
-        loginPresenter.loginUser(this,email,password);
+        loginPresenter.loginUser(this, email, password);
     }
 }

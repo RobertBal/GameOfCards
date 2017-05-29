@@ -1,3 +1,28 @@
 <resources>
     <string name="app_name">GameOfCards</string>
+    <string name="already_registered_please_signin">Already registered? Please SignIn</string>
+    <string name="login_user">Login User</string>
+    <string name="enter_your_email">Enter your email</string>
+    <string name="enter_your_password">Enter your password</string>
+    <string name="create_and_register_user">Create and register user</string>
+    <string name="Enter_the_mail">Enter the mail</string>
+    <string name="Enter_the_valid_mail">Enter the valid mail</string>
+    <string name="Enter_the_password">"Enter the  password "</string>
+    <string name="Enter_the_valid_password">Enter the valid password</string>
+    <string name="You_have_not_internet_connetction">You have not internet connection</string>
+    <string name="Welcom">Welcome</string>
+    <string name="something_went_wrong">Something went wrong</string>
+    <string name="Login">Login...</string>
+    <string name="choose_deck">Choose a deck</string>
+    <string-array name="deck_select">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+    </string-array>
+
 </resources>

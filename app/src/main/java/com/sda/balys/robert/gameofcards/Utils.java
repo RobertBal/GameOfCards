@@ -16,14 +16,17 @@ public class Utils {
     public static void showToast(Context context, String msg) {
         Toast.makeText(context, msg, Toast.LENGTH_SHORT).show();
     }
+
     //sprawdzamy czy email uzytkownika zawiera znak @
     public static boolean isEmailVavlid(String email) {
         return email.contains("@");
     }
+
     //sprawdzamy czy uzytkownik przy hasle podał ponad 6 znaków
     public static boolean isPasswordValid(String password) {
         return password.length() > 6;
     }
+
     //sprawdzanie czy posiadamy dostep do internetu
     public static boolean checkInternetConnection(Context context) {
         ConnectivityManager cm =

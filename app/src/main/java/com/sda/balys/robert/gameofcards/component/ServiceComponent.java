@@ -1,6 +1,7 @@
 package com.sda.balys.robert.gameofcards.component;
 
 import com.sda.balys.robert.gameofcards.MainActivity;
+import com.sda.balys.robert.gameofcards.module.ServiceModule;
 
 import javax.inject.Singleton;
 
